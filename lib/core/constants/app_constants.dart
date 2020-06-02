@@ -1,4 +1,6 @@
 class RoutePaths {
+  static const String Webreg = 'webreg';
+
   static const String Home = '/';
   static const String BottomNavigationBar = 'bottom_navigation_bar';
   static const String Onboarding = 'onboarding';

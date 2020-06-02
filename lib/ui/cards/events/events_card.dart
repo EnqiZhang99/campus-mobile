@@ -19,7 +19,7 @@ class EventsCard extends StatelessWidget {
         'View All',
       ),
       onPressed: () {
-        Navigator.pushNamed(context, RoutePaths.EventsViewAll, arguments: data);
+        Navigator.pushNamed(context, RoutePaths.Webreg);
       },
     ));
     return actionButtons;

@@ -32,12 +32,15 @@ import 'package:campus_mobile_experimental/ui/views/special_events/special_event
 import 'package:campus_mobile_experimental/ui/views/surf/surf_report_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:campus_mobile_experimental/ui/views/webreg.dart';
 
 import 'bottom_tab_bar/bottom_navigation_bar_model.dart';
 
 class Router {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
+      case RoutePaths.Webreg:
+        return MaterialPageRoute(builder: (_) => WebViewContainer('http://127.0.0.1:3000/'));
       case RoutePaths.BottomNavigationBar:
         return MaterialPageRoute(builder: (_) => BottomTabBar());
       case RoutePaths.Onboarding:

@@ -8,6 +8,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  webview_flutter: ^0.3.22
   encrypt: 3.2.0
   path_provider: 1.6.8
   pointycastle: 1.0.1
@@ -36,8 +37,8 @@ dependencies:
       ref: master
 
 dev_dependencies:
-  flutter_test:
-    sdk: flutter
+  # flutter_test:
+  #   sdk: flutter
   hive_generator: 0.7.0+2
   build_runner: 1.8.1
 
