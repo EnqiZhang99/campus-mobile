@@ -40,7 +40,8 @@ class Router {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
       case RoutePaths.Webreg:
-        return MaterialPageRoute(builder: (_) => WebViewContainer('http://127.0.0.1:3000/'));
+        // return MaterialPageRoute(builder: (_) => WebViewContainer('http://127.0.0.1:3000/'));
+        return MaterialPageRoute(builder: (_) => WebViewContainer('https://google.com'));
       case RoutePaths.BottomNavigationBar:
         return MaterialPageRoute(builder: (_) => BottomTabBar());
       case RoutePaths.Onboarding:

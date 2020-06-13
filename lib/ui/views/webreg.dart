@@ -20,6 +20,26 @@ class _WebViewContainerState extends State<WebViewContainer> {
   Widget build(BuildContext context) {  
     return Scaffold(  
         appBar: AppBar(
+          leading: FutureBuilder<WebViewController>(
+            future: _controller.future,
+            builder: (BuildContext context, 
+              AsyncSnapshot<WebViewController> controller) {
+                if (controller.hasData) {
+                  return BackButton(
+                    onPressed: () {
+                      controller.data.canGoBack().then((value) {
+                        if (value) {
+                          controller.data.goBack();
+                        } else {
+                          Navigator.pop(context);
+                        }
+                      });
+                    });
+                }
+
+                return Container();
+              }
+          ),
           title: const Text('Webreg'),
         ),  
         body: Builder(builder: (BuildContext context) {
